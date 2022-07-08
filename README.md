@@ -1,2 +1,2 @@
-# MSSS
- Module Selection Suggestion System
+# MSP
+ Module Selection Planner
