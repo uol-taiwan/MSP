@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-left: 2.5rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.container {
+  background-color: #888;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  border-radius: 10px;
+}
+
+.right-column .container {
+  margin-right: 2rem;
+  min-height: 50px;
+}
+
+.draggable {
+  padding: 1rem;
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+
+.level-4 {
+  background-color: #f5eb95;
+}
+
+.level-5 {
+  background-color: #70dbc2;
+}
+
+.level-6 {
+  background-color: #e3a37d;
+}
+
+#all_modules {
+  /* width: 20%; */
+}
+
+#credit-modules {
+  /*  */
+}
+
+#attempt-modules {
+  /*  */
+}
+
+#planning-modules {
+  /*  */
+}
+
+#suggestion-message {
+  background-color: #888;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  border-radius: 10px;
+  min-height: 50px;
+}
