@@ -22,13 +22,11 @@ containers.forEach((container) => {
 
   container.addEventListener("dragover", () => {
     // All the current modules on the left list
-    const all_modules = document
-      .getElementById("all_modules")
-      .outerText.split("\n");
+    const all_modules = document.getElementById("all_modules").outerText.split("\n");
     // the current draggable's content
     const draggable = document.querySelector(".dragging").textContent;
 
-    // loop through both index and value just in case in need
+    // loop through both index and value just in case
     for (const [title, content] of Object.entries(moduleSelection)) {
       // Search if the draggable exists in other containers
       // Search if the draggable exists in all_modules list
