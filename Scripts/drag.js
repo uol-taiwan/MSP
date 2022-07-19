@@ -64,7 +64,3 @@ function getDragAfterElement(container, x) {
 }
 
 // End of cited code
-
-/** Sort Modules if dragged back
- * https://stackoverflow.com/questions/5066925/javascript-only-sort-a-bunch-of-divs
- */

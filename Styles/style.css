@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
@@ -33,7 +34,7 @@ div.scrollable {
 .left-column {
   margin-bottom: 2rem;
   background-color: rgb(204, 200, 200);
-  max-width: 200px
+  max-width: 200px;
 }
 
 .right-column .container {
@@ -83,6 +84,16 @@ div.scrollable {
 
 #planning-modules {
   background-color: #b5b0f8;
+}
+
+.btn {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px;
 }
 
 #suggestion-message {
