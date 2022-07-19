@@ -28,6 +28,7 @@ containers.forEach((container) => {
   });
 });
 
+/** Re-order (sort ascendingly) after each drag is complete on the left all_modules list */
 function sortModule() {
   let toSort = document.getElementById("all_modules").children;
   toSort = Array.prototype.slice.call(toSort, 0);

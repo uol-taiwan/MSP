@@ -7,8 +7,10 @@ const moduleSelection = {
 
 containers.forEach((container) => {
   container.addEventListener("dragend", () => {
-    const currentContainer = container.id; // detecting which container dragged to
-    const latestContainer = container.outerText.split("\n"); // outputing all the current content is the latest modified container
+    // detecting which container dragged to
+    const currentContainer = container.id;
+    // outputing all the current content is the latest modified container
+    const latestContainer = container.outerText.split("\n");
 
     // Update each container with the latest draggables
     for (let title of Object.keys(moduleSelection)) {
@@ -19,10 +21,18 @@ containers.forEach((container) => {
   });
 
   container.addEventListener("dragover", () => {
+    // All the current modules on the left list
+    const all_modules = document
+      .getElementById("all_modules")
+      .outerText.split("\n");
+    // the current draggable's content
     const draggable = document.querySelector(".dragging").textContent;
-    // Search if the draggable exists in other containers
+
+    // loop through both index and value just in case in need
     for (const [title, content] of Object.entries(moduleSelection)) {
-      if (content.includes(draggable)) {
+      // Search if the draggable exists in other containers
+      // Search if the draggable exists in all_modules list
+      if (content.includes(draggable) || all_modules.includes(draggable)) {
         // Remove old draggable entries
         content.splice(content.indexOf(draggable), 1);
       }
@@ -32,5 +42,17 @@ containers.forEach((container) => {
 
 /** Triggers when button is clicked */
 function recommendation() {
+  // output the current selection in the console
   console.log(moduleSelection);
+  const suggestion = document.getElementById("suggestion-message");
+
+  let length = 0;
+  for (let title of Object.keys(moduleSelection)) {
+    length += moduleSelection[title].length;
+  }
+  // output the total selection modules number in the suggestion box
+  suggestion.innerHTML = "You have selected " + length + " modules";
 }
+
+
+
