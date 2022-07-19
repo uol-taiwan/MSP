@@ -39,18 +39,18 @@ containers.forEach((container) => {
 });
 
 /** Triggers when button is clicked */
-function recommendation() {
-  // output the current selection in the console
-  console.log(moduleSelection);
-  const suggestion = document.getElementById("suggestion-message");
+// function recommendation() {
+//   // output the current selection in the console
+//   console.log(moduleSelection);
+//   const suggestion = document.getElementById("suggestion-message");
 
-  let length = 0;
-  for (let title of Object.keys(moduleSelection)) {
-    length += moduleSelection[title].length;
-  }
-  // output the total selection modules number in the suggestion box
-  suggestion.innerHTML = "You have selected " + length + " modules";
-}
+//   let length = 0;
+//   for (let title of Object.keys(moduleSelection)) {
+//     length += moduleSelection[title].length;
+//   }
+//   // output the total selection modules number in the suggestion box
+//   suggestion.innerHTML = "You have selected " + length + " modules";
+// }
 
 
 
