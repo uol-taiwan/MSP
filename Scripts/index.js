@@ -22,7 +22,7 @@ containers.forEach((container) => {
 
   container.addEventListener("dragover", () => {
     // All the current modules on the left list
-    const all_modules = document.getElementById("all_modules").outerText.split("\n");
+    // const all_modules = document.getElementById("all_modules").outerText.split("\n");
     // the current draggable's content
     const draggable = document.querySelector(".dragging").textContent;
 
@@ -30,7 +30,7 @@ containers.forEach((container) => {
     for (const [title, content] of Object.entries(moduleSelection)) {
       // Search if the draggable exists in other containers
       // Search if the draggable exists in all_modules list
-      if (content.includes(draggable) || all_modules.includes(draggable)) {
+      if (content.includes(draggable)) {
         // Remove old draggable entries
         content.splice(content.indexOf(draggable), 1);
       }
